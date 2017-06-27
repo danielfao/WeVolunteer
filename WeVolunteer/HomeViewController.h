@@ -10,4 +10,8 @@
 
 @interface HomeViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UISegmentedControl *segmentControl;
+
+- (IBAction)segmentControl:(id)sender;
+
 @end

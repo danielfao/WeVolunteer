@@ -87,6 +87,9 @@
                                         <integer key="value" value="15"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didTapSignInButton:" destination="XxZ-st-ShL" eventType="touchUpInside" id="gob-TG-h1W"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Vt-eR-bAV">
                                 <rect key="frame" x="32" y="365" width="311" height="29"/>
@@ -94,6 +97,9 @@
                                 <state key="normal" title="Forgot Your Password?">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="didTapForgotPasswordButton:" destination="XxZ-st-ShL" eventType="touchUpInside" id="8po-Cs-RcN"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Or Sign In with" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SG6-Tn-4OF">
                                 <rect key="frame" x="32" y="457.5" width="311" height="16.5"/>
@@ -110,6 +116,9 @@
                                             <constraint firstAttribute="height" constant="64" id="7AP-k4-Psk"/>
                                         </constraints>
                                         <state key="normal" image="ic_google"/>
+                                        <connections>
+                                            <action selector="didTapGoogleButton:" destination="XxZ-st-ShL" eventType="touchUpInside" id="r9B-Vb-ta3"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EJz-CB-7p6" userLabel="Facebook icon">
                                         <rect key="frame" x="155.5" y="0.0" width="155.5" height="64"/>
@@ -117,6 +126,9 @@
                                             <constraint firstAttribute="height" constant="64" id="IRY-7u-Ah1"/>
                                         </constraints>
                                         <state key="normal" image="ic_facebook"/>
+                                        <connections>
+                                            <action selector="didTapFacebookButton:" destination="XxZ-st-ShL" eventType="touchUpInside" id="aUv-b9-E5K"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -132,6 +144,9 @@
                                 <state key="normal" title="Register Now!">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="didTapRegisterButton:" destination="XxZ-st-ShL" eventType="touchUpInside" id="501-qu-9dx"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.46551339289999999" green="0.81746651790000002" blue="0.96665736609999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -172,6 +187,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="wac-7Y-FlE"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="GTR-uo-mFv" id="DAw-vU-QJT"/>
+                        <outlet property="passwordTextField" destination="GVX-Hx-cIG" id="Zl7-8B-0tU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3mx-lv-6LV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -1,22 +1,22 @@
 //
-//  LoginViewController.m
+//  ProfileViewController.m
 //  WeVolunteer
 //
-//  Created by Daniel Oliveira on 6/13/17.
+//  Created by Daniel Oliveira on 6/27/17.
 //  Copyright © 2017 Daniel Oliveira. All rights reserved.
 //
 
-#import "LoginViewController.h"
+#import "ProfileViewController.h"
 
-@interface LoginViewController ()
+@interface ProfileViewController ()
 
 @end
 
-@implementation LoginViewController
+@implementation ProfileViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    // Do any additional setup after loading the view from its nib.
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,18 +34,4 @@
 }
 */
 
-- (IBAction)didTapSignInButton:(id)sender {
-}
-
-- (IBAction)didTapForgotPasswordButton:(id)sender {
-}
-
-- (IBAction)didTapRegisterButton:(id)sender {
-}
-
-- (IBAction)didTapGoogleButton:(id)sender {
-}
-
-- (IBAction)didTapFacebookButton:(id)sender {
-}
 @end

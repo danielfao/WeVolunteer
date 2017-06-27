@@ -46,6 +46,9 @@
                                     <segment title="" image="ic_map"/>
                                     <segment title="" image="ic_list"/>
                                 </segments>
+                                <connections>
+                                    <action selector="segmentControl:" destination="CVD-md-uq9" eventType="valueChanged" id="3X8-fM-oKA"/>
+                                </connections>
                             </segmentedControl>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FxN-IJ-Epg">
                                 <rect key="frame" x="0.0" y="100" width="375" height="567"/>
@@ -60,6 +63,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ra9-aI-Hds"/>
+                    <connections>
+                        <outlet property="segmentControl" destination="eM1-ZA-cNc" id="GFM-RB-F4a"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="12Y-cc-fuJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

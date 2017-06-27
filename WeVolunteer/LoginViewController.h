@@ -10,4 +10,13 @@
 
 @interface LoginViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UITextField *emailTextField;
+@property (strong, nonatomic) IBOutlet UITextField *passwordTextField;
+
+- (IBAction)didTapSignInButton:(id)sender;
+- (IBAction)didTapForgotPasswordButton:(id)sender;
+- (IBAction)didTapRegisterButton:(id)sender;
+- (IBAction)didTapGoogleButton:(id)sender;
+- (IBAction)didTapFacebookButton:(id)sender;
+
 @end
