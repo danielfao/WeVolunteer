@@ -246,7 +246,7 @@
 				TargetAttributes = {
 					114CFBE81EF02F39002F4B7D = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 8E6SS8ZMKA;
+						DevelopmentTeam = W5849F638E;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -467,10 +467,10 @@
 			baseConfigurationReference = 02A39FFB4C0F6B3D1805F895 /* Pods-WeVolunteer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 8E6SS8ZMKA;
+				DEVELOPMENT_TEAM = W5849F638E;
 				INFOPLIST_FILE = WeVolunteer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.danieloliveira.WeVolunteer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.danieloliveira.WeVolunteer2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -480,10 +480,10 @@
 			baseConfigurationReference = A56522C5797B734E61C07D76 /* Pods-WeVolunteer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 8E6SS8ZMKA;
+				DEVELOPMENT_TEAM = W5849F638E;
 				INFOPLIST_FILE = WeVolunteer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.danieloliveira.WeVolunteer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.danieloliveira.WeVolunteer2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
