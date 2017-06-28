@@ -11,6 +11,8 @@
 		1114CA5E1EF046B2005A14CE /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1114CA5D1EF046B2005A14CE /* LoginViewController.m */; };
 		113FFE481F02B30500162188 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 113FFE461F02B30500162188 /* ProfileViewController.m */; };
 		113FFE4D1F02B3C700162188 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 113FFE4C1F02B3C700162188 /* Profile.storyboard */; };
+		113FFE561F04067100162188 /* InitialSetUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 113FFE551F04067100162188 /* InitialSetUpViewController.m */; };
+		113FFE581F04068F00162188 /* InitialSetUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 113FFE571F04068F00162188 /* InitialSetUp.storyboard */; };
 		114CFBEE1EF02F39002F4B7D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 114CFBED1EF02F39002F4B7D /* main.m */; };
 		114CFBF11EF02F39002F4B7D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 114CFBF01EF02F39002F4B7D /* AppDelegate.m */; };
 		114CFBF41EF02F39002F4B7D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 114CFBF31EF02F39002F4B7D /* ViewController.m */; };
@@ -31,6 +33,9 @@
 		113FFE451F02B30500162188 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		113FFE461F02B30500162188 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		113FFE4C1F02B3C700162188 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		113FFE541F04067100162188 /* InitialSetUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitialSetUpViewController.h; sourceTree = "<group>"; };
+		113FFE551F04067100162188 /* InitialSetUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitialSetUpViewController.m; sourceTree = "<group>"; };
+		113FFE571F04068F00162188 /* InitialSetUp.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = InitialSetUp.storyboard; sourceTree = "<group>"; };
 		114CFBE91EF02F39002F4B7D /* WeVolunteer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeVolunteer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		114CFBED1EF02F39002F4B7D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		114CFBEF1EF02F39002F4B7D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -62,13 +67,93 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		113FFE531F04061300162188 /* InitialSetUp */ = {
+			isa = PBXGroup;
+			children = (
+				113FFE541F04067100162188 /* InitialSetUpViewController.h */,
+				113FFE551F04067100162188 /* InitialSetUpViewController.m */,
+				113FFE571F04068F00162188 /* InitialSetUp.storyboard */,
+			);
+			name = InitialSetUp;
+			sourceTree = "<group>";
+		};
+		113FFE591F04128C00162188 /* TabBarControllers */ = {
+			isa = PBXGroup;
+			children = (
+				115A5CF31EF18AFF00E86921 /* TabBarViewController.h */,
+				115A5CF41EF18AFF00E86921 /* TabBarViewController.m */,
+			);
+			name = TabBarControllers;
+			sourceTree = "<group>";
+		};
+		113FFE5A1F0412F100162188 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				113FFE5F1F04134000162188 /* Profile */,
+				113FFE5D1F04131A00162188 /* Home */,
+				113FFE5B1F0412FD00162188 /* Login */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		113FFE5B1F0412FD00162188 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				113FFE5C1F04130C00162188 /* LoginViewController */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		113FFE5C1F04130C00162188 /* LoginViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1114CA5C1EF046B2005A14CE /* LoginViewController.h */,
+				1114CA5D1EF046B2005A14CE /* LoginViewController.m */,
+			);
+			name = LoginViewController;
+			sourceTree = "<group>";
+		};
+		113FFE5D1F04131A00162188 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				113FFE5E1F04132000162188 /* HomeViewController */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		113FFE5E1F04132000162188 /* HomeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				118038321EF17CEB0062DEF9 /* HomeViewController.h */,
+				118038331EF17CEB0062DEF9 /* HomeViewController.m */,
+			);
+			name = HomeViewController;
+			sourceTree = "<group>";
+		};
+		113FFE5F1F04134000162188 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				113FFE601F04134600162188 /* ProfileViewController */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
+		113FFE601F04134600162188 /* ProfileViewController */ = {
+			isa = PBXGroup;
+			children = (
+				113FFE451F02B30500162188 /* ProfileViewController.h */,
+				113FFE461F02B30500162188 /* ProfileViewController.m */,
+			);
+			name = ProfileViewController;
+			sourceTree = "<group>";
+		};
 		114CFBE01EF02F39002F4B7D = {
 			isa = PBXGroup;
 			children = (
 				114CFBEB1EF02F39002F4B7D /* WeVolunteer */,
-				114CFBEA1EF02F39002F4B7D /* Products */,
-				FE480E8D99E1ACC69654852D /* Pods */,
 				132AE1502B651845B116E842 /* Frameworks */,
+				FE480E8D99E1ACC69654852D /* Pods */,
+				114CFBEA1EF02F39002F4B7D /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -84,25 +169,20 @@
 			isa = PBXGroup;
 			children = (
 				114CFBEF1EF02F39002F4B7D /* AppDelegate.h */,
-				114CFBF01EF02F39002F4B7D /* AppDelegate.m */,
-				114CFBF81EF02F39002F4B7D /* Assets.xcassets */,
-				118038301EF17C750062DEF9 /* Home.storyboard */,
-				118038321EF17CEB0062DEF9 /* HomeViewController.h */,
-				118038331EF17CEB0062DEF9 /* HomeViewController.m */,
-				114CFBFD1EF02F39002F4B7D /* Info.plist */,
-				114CFBFA1EF02F39002F4B7D /* LaunchScreen.storyboard */,
-				1114CA5A1EF045C8005A14CE /* Login.storyboard */,
-				1114CA5C1EF046B2005A14CE /* LoginViewController.h */,
-				1114CA5D1EF046B2005A14CE /* LoginViewController.m */,
-				114CFBF51EF02F39002F4B7D /* Main.storyboard */,
-				114CFBEC1EF02F39002F4B7D /* Supporting Files */,
 				114CFBF21EF02F39002F4B7D /* ViewController.h */,
+				114CFBF01EF02F39002F4B7D /* AppDelegate.m */,
 				114CFBF31EF02F39002F4B7D /* ViewController.m */,
-				115A5CF31EF18AFF00E86921 /* TabBarViewController.h */,
-				115A5CF41EF18AFF00E86921 /* TabBarViewController.m */,
-				113FFE451F02B30500162188 /* ProfileViewController.h */,
-				113FFE461F02B30500162188 /* ProfileViewController.m */,
+				114CFBFD1EF02F39002F4B7D /* Info.plist */,
+				118038301EF17C750062DEF9 /* Home.storyboard */,
+				1114CA5A1EF045C8005A14CE /* Login.storyboard */,
 				113FFE4C1F02B3C700162188 /* Profile.storyboard */,
+				114CFBFA1EF02F39002F4B7D /* LaunchScreen.storyboard */,
+				114CFBF51EF02F39002F4B7D /* Main.storyboard */,
+				114CFBF81EF02F39002F4B7D /* Assets.xcassets */,
+				113FFE531F04061300162188 /* InitialSetUp */,
+				114CFBEC1EF02F39002F4B7D /* Supporting Files */,
+				113FFE591F04128C00162188 /* TabBarControllers */,
+				113FFE5A1F0412F100162188 /* ViewControllers */,
 			);
 			path = WeVolunteer;
 			sourceTree = "<group>";
@@ -195,6 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				113FFE4D1F02B3C700162188 /* Profile.storyboard in Resources */,
+				113FFE581F04068F00162188 /* InitialSetUp.storyboard in Resources */,
 				1114CA5B1EF045C8005A14CE /* Login.storyboard in Resources */,
 				118038311EF17C750062DEF9 /* Home.storyboard in Resources */,
 				114CFBFC1EF02F39002F4B7D /* LaunchScreen.storyboard in Resources */,
@@ -259,6 +340,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1114CA5E1EF046B2005A14CE /* LoginViewController.m in Sources */,
+				113FFE561F04067100162188 /* InitialSetUpViewController.m in Sources */,
 				114CFBF41EF02F39002F4B7D /* ViewController.m in Sources */,
 				114CFBF11EF02F39002F4B7D /* AppDelegate.m in Sources */,
 				118038341EF17CEB0062DEF9 /* HomeViewController.m in Sources */,

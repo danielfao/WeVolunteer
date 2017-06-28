@@ -11,6 +11,7 @@
 @interface HomeViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet UISegmentedControl *segmentControl;
+@property (strong, nonatomic) IBOutlet UIImageView *imageView;
 
 - (IBAction)segmentControl:(id)sender;
 

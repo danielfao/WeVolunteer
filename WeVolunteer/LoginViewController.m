@@ -7,6 +7,7 @@
 //
 
 #import "LoginViewController.h"
+#import "HomeViewController.h"
 
 @interface LoginViewController ()
 
@@ -35,6 +36,9 @@
 */
 
 - (IBAction)didTapSignInButton:(id)sender {
+    UIStoryboard *homeSB = [UIStoryboard storyboardWithName:@"Home" bundle:nil];
+    HomeViewController *homeVC = [homeSB instantiateViewControllerWithIdentifier: @"HomeViewController"];
+    [self.navigationController pushViewController:homeVC animated:YES];
 }
 
 - (IBAction)didTapForgotPasswordButton:(id)sender {

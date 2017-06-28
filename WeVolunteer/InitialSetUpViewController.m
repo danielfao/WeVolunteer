@@ -1,18 +1,19 @@
 //
-//  TabBarViewController.m
+//  InitialSetUpViewController.m
 //  WeVolunteer
 //
-//  Created by Daniel Oliveira on 6/14/17.
+//  Created by Daniel Oliveira on 6/28/17.
 //  Copyright © 2017 Daniel Oliveira. All rights reserved.
 //
 
+#import "InitialSetUpViewController.h"
 #import "TabBarViewController.h"
 
-@interface TabBarViewController ()
+@interface InitialSetUpViewController ()
 
 @end
 
-@implementation TabBarViewController
+@implementation InitialSetUpViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -22,6 +23,14 @@
     self.navigationController.navigationBar.translucent = NO;
     self.navigationController.navigationBar.hidden = NO;
     self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    TabBarViewController *vc = [sb instantiateInitialViewController];
+    [self.navigationController presentViewController:vc animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {
