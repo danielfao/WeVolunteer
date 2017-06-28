@@ -12,7 +12,7 @@
         <!--Tab Bar View Controller-->
         <scene sceneID="trM-zA-gUV">
             <objects>
-                <tabBarController id="yey-Nu-MjB" customClass="TabBarViewController" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBar" id="yey-Nu-MjB" customClass="TabBarViewController" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="oDp-A5-aAM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -37,7 +37,7 @@
         <!--Login-->
         <scene sceneID="Fa8-xd-7nF">
             <objects>
-                <viewControllerPlaceholder storyboardName="Login" id="oAx-gV-uWQ" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="Login" storyboardName="Login" id="oAx-gV-uWQ" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bhM-fy-ehM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="375" y="121"/>
@@ -45,26 +45,26 @@
         <!--Home-->
         <scene sceneID="awM-5V-zxb">
             <objects>
-                <viewControllerPlaceholder storyboardName="Home" id="Iww-z0-sH1" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="Home" storyboardName="Home" id="Iww-z0-sH1" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Home" image="ic_home" id="MEy-wg-8KB" userLabel="Home">
                         <inset key="imageInsets" minX="7" minY="12" maxX="7" maxY="3"/>
                     </tabBarItem>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UG6-aF-IH3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-525" y="603"/>
+            <point key="canvasLocation" x="-433" y="686"/>
         </scene>
         <!--Profile-->
         <scene sceneID="anG-jO-TEb">
             <objects>
-                <viewControllerPlaceholder storyboardName="Profile" id="r6O-v0-SRw" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="Profile" storyboardName="Profile" id="r6O-v0-SRw" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Profile" image="ic_profile" id="yC1-Dl-1qn" userLabel="Profile">
                         <inset key="imageInsets" minX="8" minY="12" maxX="8" maxY="4"/>
                     </tabBarItem>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bme-yD-WE0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-37" y="603"/>
+            <point key="canvasLocation" x="-128" y="686"/>
         </scene>
     </scenes>
     <resources>

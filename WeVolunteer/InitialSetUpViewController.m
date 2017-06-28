@@ -32,17 +32,17 @@
     //Check if the user is logged or not
     BOOL isLogged = NO;
     
-    if (isLogged) {
-        isLogged = YES;
-        UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-        TabBarViewController *vc = [sb instantiateInitialViewController];
-        [self.navigationController presentViewController:vc animated:NO completion:nil];
-    } else {
+    if (isLogged == NO) {
         UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
         LoginViewController *vc = [sb instantiateInitialViewController];
         [self.navigationController presentViewController:vc animated:YES completion:nil];
+        isLogged = YES;
+    } else {
+        UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        TabBarViewController *vc = [sb instantiateInitialViewController];
+        [self.navigationController presentViewController:vc animated:NO completion:nil];
+        
     }
-    
 }
 
 - (void)didReceiveMemoryWarning {
