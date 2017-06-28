@@ -61,6 +61,9 @@
 }
 */
 
+
+
+
 //Set Navigation Button Image
 - (UIButton*)setImageNavbarButtons: (NSString *) imageName {
     UIImage* image = [UIImage imageNamed: imageName];
@@ -72,6 +75,8 @@
 
     return button;
 }
+
+#pragma mark - IBActions
 
 - (IBAction)segmentControl:(id)sender {
     if (self.segmentControl.selectedSegmentIndex == 0) {

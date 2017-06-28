@@ -9,10 +9,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
+        <!--Home-->
         <scene sceneID="Az2-C8-c2N">
             <objects>
                 <navigationController id="Hvz-Rb-wGk" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="ic_home" id="8WN-yq-y5r">
+                        <inset key="imageInsets" minX="7" minY="12" maxX="7" maxY="3"/>
+                    </tabBarItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="i34-Ug-Kfu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -51,6 +55,7 @@
                                     <segment title="" image="ic_map"/>
                                     <segment title="" image="ic_list"/>
                                 </segments>
+                                <color key="tintColor" red="0.98431372549019602" green="0.31372549019607843" blue="0.070588235294117646" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="segmentControl:" destination="CVD-md-uq9" eventType="valueChanged" id="3X8-fM-oKA"/>
                                 </connections>
@@ -75,6 +80,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ic_home" width="64" height="64"/>
         <image name="ic_list" width="64" height="64"/>
         <image name="ic_map" width="64" height="64"/>
     </resources>

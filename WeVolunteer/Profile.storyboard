@@ -49,12 +49,16 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GFn-Lk-gZl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-528" y="-13"/>
+            <point key="canvasLocation" x="-178" y="-12"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Profile-->
         <scene sceneID="W4g-ER-8yn">
             <objects>
                 <navigationController id="M2k-b1-1Va" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" image="ic_profile" id="FSM-WZ-XL2">
+                        <inset key="imageInsets" minX="8" minY="12" maxX="8" maxY="4"/>
+                    </tabBarItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="apd-6v-0QG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

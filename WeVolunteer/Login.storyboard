@@ -33,7 +33,7 @@
                         <viewControllerLayoutGuide type="top" id="I5p-6e-sfM"/>
                         <viewControllerLayoutGuide type="bottom" id="v8V-F7-3V0"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="0PV-c2-5h9">
+                    <view key="view" contentMode="scaleToFill" id="0PV-c2-5h9" customClass="UIControl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -185,6 +185,9 @@
                             <constraint firstItem="NkL-os-tMM" firstAttribute="leading" secondItem="0PV-c2-5h9" secondAttribute="leading" constant="32" id="uzT-cY-EcG"/>
                             <constraint firstItem="tyL-1i-wa6" firstAttribute="top" secondItem="GVX-Hx-cIG" secondAttribute="bottom" id="w5R-yV-bC9"/>
                         </constraints>
+                        <connections>
+                            <action selector="hideKeyboard:" destination="XxZ-st-ShL" eventType="touchUpInside" id="VGp-wb-quA"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="wac-7Y-FlE"/>
                     <connections>

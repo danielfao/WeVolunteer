@@ -35,10 +35,11 @@
 }
 */
 
+
+#pragma mark - IBActions
+
 - (IBAction)didTapSignInButton:(id)sender {
-    UIStoryboard *homeSB = [UIStoryboard storyboardWithName:@"Home" bundle:nil];
-    HomeViewController *homeVC = [homeSB instantiateViewControllerWithIdentifier: @"HomeViewController"];
-    [self.navigationController pushViewController:homeVC animated:YES];
+    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (IBAction)didTapForgotPasswordButton:(id)sender {
@@ -51,5 +52,10 @@
 }
 
 - (IBAction)didTapFacebookButton:(id)sender {
+}
+
+//Method called when clicking anywhere in the view
+- (IBAction)hideKeyboard:(id)sender {
+    [self.view endEditing:YES];
 }
 @end
