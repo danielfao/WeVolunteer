@@ -21,6 +21,7 @@
 		115A5CF51EF18AFF00E86921 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 115A5CF41EF18AFF00E86921 /* TabBarViewController.m */; };
 		118038311EF17C750062DEF9 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 118038301EF17C750062DEF9 /* Home.storyboard */; };
 		118038341EF17CEB0062DEF9 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 118038331EF17CEB0062DEF9 /* HomeViewController.m */; };
+		11FDFA211F0535E600C3ADBF /* AppUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 11FDFA201F0535E600C3ADBF /* AppUtils.m */; };
 		C4BC8226FD98BF7109E7B9C8 /* libPods-WeVolunteer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 339191B153D558D6A206AD66 /* libPods-WeVolunteer.a */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,9 @@
 		118038301EF17C750062DEF9 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		118038321EF17CEB0062DEF9 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		118038331EF17CEB0062DEF9 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		11FDFA1F1F0535E600C3ADBF /* AppUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppUtils.h; sourceTree = "<group>"; };
+		11FDFA201F0535E600C3ADBF /* AppUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppUtils.m; sourceTree = "<group>"; };
+		11FDFA231F05407C00C3ADBF /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		339191B153D558D6A206AD66 /* libPods-WeVolunteer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WeVolunteer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A56522C5797B734E61C07D76 /* Pods-WeVolunteer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeVolunteer.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeVolunteer/Pods-WeVolunteer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -165,6 +169,7 @@
 		114CFBEB1EF02F39002F4B7D /* WeVolunteer */ = {
 			isa = PBXGroup;
 			children = (
+				11FDFA1B1F0533EE00C3ADBF /* Config */,
 				114CFBEF1EF02F39002F4B7D /* AppDelegate.h */,
 				114CFBF01EF02F39002F4B7D /* AppDelegate.m */,
 				114CFBFD1EF02F39002F4B7D /* Info.plist */,
@@ -188,6 +193,16 @@
 				114CFBED1EF02F39002F4B7D /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		11FDFA1B1F0533EE00C3ADBF /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				11FDFA1F1F0535E600C3ADBF /* AppUtils.h */,
+				11FDFA201F0535E600C3ADBF /* AppUtils.m */,
+				11FDFA231F05407C00C3ADBF /* Constants.h */,
+			);
+			name = Config;
 			sourceTree = "<group>";
 		};
 		132AE1502B651845B116E842 /* Frameworks */ = {
@@ -341,6 +356,7 @@
 				113FFE481F02B30500162188 /* ProfileViewController.m in Sources */,
 				115A5CF51EF18AFF00E86921 /* TabBarViewController.m in Sources */,
 				114CFBEE1EF02F39002F4B7D /* main.m in Sources */,
+				11FDFA211F0535E600C3ADBF /* AppUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

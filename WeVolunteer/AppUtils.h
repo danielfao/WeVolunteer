@@ -7,7 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import "Constants.h"
 
 @interface AppUtils : NSObject
 
++(UILabel *) createTitleLabelWithString:(NSString *)title;
++(UIView *) createTableViewHeaderWithTitle:(NSString *)title andView:(UIView *)view;
++(void)setTextFieldLeftImageWithImage:(UIImage *)image andTextField:(UITextField *)textField andPadding:(CGFloat)leftPadding;
+
++(void)startLoadingInView:(UIView *)view;
++(void)stopLoadingInView:(UIView *)view;
 @end
