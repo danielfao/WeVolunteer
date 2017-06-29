@@ -60,6 +60,20 @@
     textField.leftView = view;
 }
 
+//Profile Image Circle Shape with a border
++(UIImageView *)setCircleImageViewProfile:(UIImageView *)image {
+    
+    //Creates a circle shape to profile image
+    image.layer.cornerRadius = image.frame.size.width / 2;
+    image.clipsToBounds = YES;
+    
+    //Creates a border around the profile image
+    image.layer.borderWidth = 3.0f;
+    image.layer.borderColor = [UIColor whiteColor].CGColor;
+    
+    return image;
+}
+
 #pragma mark - LoadingView
 
 //Adds white view and an activity indicator

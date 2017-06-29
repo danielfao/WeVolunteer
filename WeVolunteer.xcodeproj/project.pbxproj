@@ -22,6 +22,8 @@
 		118038311EF17C750062DEF9 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 118038301EF17C750062DEF9 /* Home.storyboard */; };
 		118038341EF17CEB0062DEF9 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 118038331EF17CEB0062DEF9 /* HomeViewController.m */; };
 		11FDFA211F0535E600C3ADBF /* AppUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 11FDFA201F0535E600C3ADBF /* AppUtils.m */; };
+		11FDFA2D1F05750F00C3ADBF /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11FDFA2C1F05750F00C3ADBF /* Register.storyboard */; };
+		11FDFA301F05752000C3ADBF /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11FDFA2F1F05752000C3ADBF /* RegisterViewController.m */; };
 		C4BC8226FD98BF7109E7B9C8 /* libPods-WeVolunteer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 339191B153D558D6A206AD66 /* libPods-WeVolunteer.a */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +54,9 @@
 		11FDFA1F1F0535E600C3ADBF /* AppUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppUtils.h; sourceTree = "<group>"; };
 		11FDFA201F0535E600C3ADBF /* AppUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppUtils.m; sourceTree = "<group>"; };
 		11FDFA231F05407C00C3ADBF /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		11FDFA2C1F05750F00C3ADBF /* Register.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
+		11FDFA2E1F05752000C3ADBF /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		11FDFA2F1F05752000C3ADBF /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		339191B153D558D6A206AD66 /* libPods-WeVolunteer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WeVolunteer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A56522C5797B734E61C07D76 /* Pods-WeVolunteer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeVolunteer.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeVolunteer/Pods-WeVolunteer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -90,6 +95,7 @@
 		113FFE5A1F0412F100162188 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				11FDFA241F05736A00C3ADBF /* Register */,
 				113FFE5D1F04131A00162188 /* Home */,
 				113FFE5B1F0412FD00162188 /* Login */,
 				113FFE5F1F04134000162188 /* Profile */,
@@ -177,6 +183,7 @@
 				114CFBFA1EF02F39002F4B7D /* LaunchScreen.storyboard */,
 				114CFBF51EF02F39002F4B7D /* Main.storyboard */,
 				113FFE4C1F02B3C700162188 /* Profile.storyboard */,
+				11FDFA2C1F05750F00C3ADBF /* Register.storyboard */,
 				114CFBF81EF02F39002F4B7D /* Assets.xcassets */,
 				11FDFA1B1F0533EE00C3ADBF /* Config */,
 				113FFE531F04061300162188 /* InitialSetUp */,
@@ -203,6 +210,23 @@
 				11FDFA231F05407C00C3ADBF /* Constants.h */,
 			);
 			name = Config;
+			sourceTree = "<group>";
+		};
+		11FDFA241F05736A00C3ADBF /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				11FDFA251F05737500C3ADBF /* RegisterViewController */,
+			);
+			name = Register;
+			sourceTree = "<group>";
+		};
+		11FDFA251F05737500C3ADBF /* RegisterViewController */ = {
+			isa = PBXGroup;
+			children = (
+				11FDFA2E1F05752000C3ADBF /* RegisterViewController.h */,
+				11FDFA2F1F05752000C3ADBF /* RegisterViewController.m */,
+			);
+			name = RegisterViewController;
 			sourceTree = "<group>";
 		};
 		132AE1502B651845B116E842 /* Frameworks */ = {
@@ -291,6 +315,7 @@
 				114CFBFC1EF02F39002F4B7D /* LaunchScreen.storyboard in Resources */,
 				114CFBF91EF02F39002F4B7D /* Assets.xcassets in Resources */,
 				114CFBF71EF02F39002F4B7D /* Main.storyboard in Resources */,
+				11FDFA2D1F05750F00C3ADBF /* Register.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,6 +378,7 @@
 				113FFE561F04067100162188 /* InitialSetUpViewController.m in Sources */,
 				114CFBF11EF02F39002F4B7D /* AppDelegate.m in Sources */,
 				118038341EF17CEB0062DEF9 /* HomeViewController.m in Sources */,
+				11FDFA301F05752000C3ADBF /* RegisterViewController.m in Sources */,
 				113FFE481F02B30500162188 /* ProfileViewController.m in Sources */,
 				115A5CF51EF18AFF00E86921 /* TabBarViewController.m in Sources */,
 				114CFBEE1EF02F39002F4B7D /* main.m in Sources */,

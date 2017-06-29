@@ -15,6 +15,7 @@
 +(UILabel *) createTitleLabelWithString:(NSString *)title;
 +(UIView *) createTableViewHeaderWithTitle:(NSString *)title andView:(UIView *)view;
 +(void)setTextFieldLeftImageWithImage:(UIImage *)image andTextField:(UITextField *)textField andPadding:(CGFloat)leftPadding;
++(UIImageView *)setCircleImageViewProfile:(UIImageView *)image;
 
 +(void)startLoadingInView:(UIView *)view;
 +(void)stopLoadingInView:(UIView *)view;

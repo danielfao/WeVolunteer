@@ -1,25 +1,25 @@
 //
-//  ProfileViewController.m
+//  RegisterViewController.m
 //  WeVolunteer
 //
-//  Created by Daniel Oliveira on 6/27/17.
+//  Created by Daniel Oliveira on 6/29/17.
 //  Copyright © 2017 Daniel Oliveira. All rights reserved.
 //
 
-#import "ProfileViewController.h"
+#import "RegisterViewController.h"
 #import "AppUtils.h"
 
-@interface ProfileViewController ()
+@interface RegisterViewController ()
 
 @end
 
-@implementation ProfileViewController
+@implementation RegisterViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    // Do any additional setup after loading the view.
     
-    self.profileImage = [AppUtils setCircleImageViewProfile:self.profileImage];
+    self.profileImageView = [AppUtils setCircleImageViewProfile:self.profileImageView];
 }
 
 - (void)didReceiveMemoryWarning {
