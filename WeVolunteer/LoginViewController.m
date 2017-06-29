@@ -8,6 +8,7 @@
 
 #import "LoginViewController.h"
 #import "HomeViewController.h"
+#import "AppUtils.h"
 
 @interface LoginViewController ()
 
@@ -39,6 +40,8 @@
 #pragma mark - IBActions
 
 - (IBAction)didTapSignInButton:(id)sender {
+    [AppUtils startLoadingInView:self.view];
+    [AppUtils stopLoadingInView:self.view];
     [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 }
 

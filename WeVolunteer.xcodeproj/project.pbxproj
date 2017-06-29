@@ -169,16 +169,16 @@
 		114CFBEB1EF02F39002F4B7D /* WeVolunteer */ = {
 			isa = PBXGroup;
 			children = (
-				11FDFA1B1F0533EE00C3ADBF /* Config */,
 				114CFBEF1EF02F39002F4B7D /* AppDelegate.h */,
 				114CFBF01EF02F39002F4B7D /* AppDelegate.m */,
 				114CFBFD1EF02F39002F4B7D /* Info.plist */,
 				118038301EF17C750062DEF9 /* Home.storyboard */,
 				1114CA5A1EF045C8005A14CE /* Login.storyboard */,
-				113FFE4C1F02B3C700162188 /* Profile.storyboard */,
 				114CFBFA1EF02F39002F4B7D /* LaunchScreen.storyboard */,
 				114CFBF51EF02F39002F4B7D /* Main.storyboard */,
+				113FFE4C1F02B3C700162188 /* Profile.storyboard */,
 				114CFBF81EF02F39002F4B7D /* Assets.xcassets */,
+				11FDFA1B1F0533EE00C3ADBF /* Config */,
 				113FFE531F04061300162188 /* InitialSetUp */,
 				114CFBEC1EF02F39002F4B7D /* Supporting Files */,
 				113FFE591F04128C00162188 /* TabBarControllers */,
