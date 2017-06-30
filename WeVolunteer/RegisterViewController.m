@@ -19,7 +19,14 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.profileImageView = [AppUtils setCircleImageViewProfile:self.profileImageView];
+    //Set the profile image circle shape
+    [AppUtils setCircleImageViewProfile:self.profileImageView];
+    
+    //Puts an image on the left side of the text field
+    [AppUtils setTextFieldLeftImageWithImage:[UIImage imageNamed:@"ic_lock"] andTextField:self.passwordTextField andPadding:5.0];
+    [AppUtils setTextFieldLeftImageWithImage:[UIImage imageNamed:@"ic_email"] andTextField:self.emailTextField andPadding:5.0];
+    [AppUtils setTextFieldLeftImageWithImage:[UIImage imageNamed:@"ic_iphone"] andTextField:self.phoneNumberTextField andPadding:5.0];
+    [AppUtils setTextFieldLeftImageWithImage:[UIImage imageNamed:@"ic_user"] andTextField:self.nameTextField andPadding:5.0];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -36,5 +43,16 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+#pragma mark - IBActions
+
+- (IBAction)didTapCreateAccountButton:(id)sender {
+
+}
+
+//Method called when clicking anywhere in the view
+- (IBAction)hideKeyboard:(id)sender {
+    [self.view endEditing:YES];
+}
 
 @end

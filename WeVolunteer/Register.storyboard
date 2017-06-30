@@ -28,22 +28,22 @@
         <!--Register View Controller-->
         <scene sceneID="heP-oG-ozO">
             <objects>
-                <viewController id="a9K-cg-ddn" customClass="RegisterViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegisterViewController" id="a9K-cg-ddn" customClass="RegisterViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7kH-Fk-ayO"/>
                         <viewControllerLayoutGuide type="bottom" id="yOr-EN-KIU"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kEK-bw-6L1">
+                    <view key="view" contentMode="scaleToFill" id="kEK-bw-6L1" customClass="UIControl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileImageSample" translatesAutoresizingMaskIntoConstraints="NO" id="fSL-mC-UUd">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptyProfile" translatesAutoresizingMaskIntoConstraints="NO" id="fSL-mC-UUd">
                                 <rect key="frame" x="112" y="109" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="hmV-PM-yaj"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="95y-w4-8DF">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="95y-w4-8DF">
                                 <rect key="frame" x="37" y="356" width="300" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
@@ -55,7 +55,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2In-lz-g2J">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="phone" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2In-lz-g2J">
                                 <rect key="frame" x="37" y="432" width="300" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
@@ -78,8 +78,11 @@
                                         <integer key="value" value="15"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didTapCreateAccountButton:" destination="a9K-cg-ddn" eventType="touchUpInside" id="ntZ-3S-9uU"/>
+                                </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bkJ-8A-XEb">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="e-mail" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bkJ-8A-XEb">
                                 <rect key="frame" x="37" y="394" width="300" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
@@ -91,7 +94,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jze-48-cY5">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="name" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jze-48-cY5">
                                 <rect key="frame" x="37" y="318" width="300" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
@@ -110,10 +113,12 @@
                             <constraint firstItem="fSL-mC-UUd" firstAttribute="leading" secondItem="kEK-bw-6L1" secondAttribute="leading" constant="112" id="9YV-Fv-bXG"/>
                             <constraint firstItem="fSL-mC-UUd" firstAttribute="top" secondItem="7kH-Fk-ayO" secondAttribute="bottom" constant="45" id="wZc-S8-4Xa"/>
                         </constraints>
+                        <connections>
+                            <action selector="hideKeyboard:" destination="a9K-cg-ddn" eventType="touchUpInside" id="iyr-vh-C6m"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="XOo-tn-9Ws"/>
                     <connections>
-                        <outlet property="didTapCreateAccountButton" destination="UeW-92-GXH" id="08w-lR-uMk"/>
                         <outlet property="emailTextField" destination="bkJ-8A-XEb" id="MED-3T-JGu"/>
                         <outlet property="nameTextField" destination="jze-48-cY5" id="MU0-Nt-GAO"/>
                         <outlet property="passwordTextField" destination="95y-w4-8DF" id="owy-YJ-TrC"/>
@@ -127,6 +132,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="profileImageSample" width="1536" height="1536"/>
+        <image name="emptyProfile" width="250" height="250"/>
     </resources>
 </document>

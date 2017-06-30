@@ -16,6 +16,7 @@
 @property (strong, nonatomic) IBOutlet UITextField *emailTextField;
 @property (strong, nonatomic) IBOutlet UITextField *phoneNumberTextField;
 
-@property (strong, nonatomic) IBOutlet UIButton *didTapCreateAccountButton;
+- (IBAction)didTapCreateAccountButton:(id)sender;
+- (IBAction)hideKeyboard:(id)sender;
 
 @end

@@ -8,6 +8,7 @@
 
 #import "LoginViewController.h"
 #import "HomeViewController.h"
+#import "RegisterViewController.h"
 #import "AppUtils.h"
 
 @interface LoginViewController ()
@@ -19,6 +20,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    //NavigationBar hidden so the background color takes all the screen
+    self.navigationController.navigationBar.translucent = YES;
+    self.navigationController.navigationBar.hidden = YES;
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
+    
+    //Puts an image on the left side of the text field
+    [AppUtils setTextFieldLeftImageWithImage:[UIImage imageNamed:@"ic_lock_white"] andTextField:self.passwordTextField andPadding:5.0];
+    [AppUtils setTextFieldLeftImageWithImage:[UIImage imageNamed:@"ic_email_white"] andTextField:self.emailTextField andPadding:5.0];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -49,6 +59,9 @@
 }
 
 - (IBAction)didTapRegisterButton:(id)sender {
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Register" bundle:nil];
+    RegisterViewController *vc = [sb instantiateViewControllerWithIdentifier:@"RegisterViewController"];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (IBAction)didTapGoogleButton:(id)sender {

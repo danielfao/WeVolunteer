@@ -19,7 +19,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    self.profileImage = [AppUtils setCircleImageViewProfile:self.profileImage];
+    //Set the profile image circle shape
+    [AppUtils setCircleImageViewProfile:self.profileImage];
 }
 
 - (void)didReceiveMemoryWarning {
