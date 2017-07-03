@@ -7,6 +7,7 @@
 //
 
 #import "HomeViewController.h"
+#import "LoginViewController.h"
 
 @interface HomeViewController ()
 
@@ -95,5 +96,9 @@
         NSLog(@"Error signing out: %@", signOutError);
         return;
     }
+    
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
+    LoginViewController *vc = [sb instantiateViewControllerWithIdentifier:@"LoginViewController"];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 @end

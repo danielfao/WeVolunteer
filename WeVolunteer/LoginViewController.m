@@ -69,38 +69,28 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
--(void)signIn:(GIDSignIn *) signIn didSignInForUser:(GIDGoogleUser *)user withError:(NSError *)error {
+- (void)signIn:(GIDSignIn *) signIn didSignInForUser:(GIDGoogleUser *)user withError:(NSError *)error {
     if(error == nil) {
         GIDAuthentication *authentication = user.authentication;
         FIRAuthCredential *credential = [FIRGoogleAuthProvider
                                          credentialWithIDToken:authentication.idToken
                                          accessToken:authentication.accessToken];
         
-        [[FIRAuth auth] signInWithCredential:credential
-                                  completion:^(FIRUser * _Nullable user,
-                                               NSError * _Nullable error) {
-                                      if(user){
-                                          NSString *welcomeMessage = [NSString stringWithFormat:
-                                                                      @"Welcome to We Volunteer, %@", user.displayName];
-                                          NSString *alertTitle = @"We Volunteer";
-                                          UIAlertController *alertController = [UIAlertController
-                                                                                alertControllerWithTitle:alertTitle
-                                                                                message:welcomeMessage
-                                                                                preferredStyle:UIAlertControllerStyleAlert];
-                                          UIAlertAction *okAction = [UIAlertAction
-                                                                     actionWithTitle:NSLocalizedString(@"OK", @"OK action")
-                                                                     style:UIAlertActionStyleDefault
-                                                                     handler:^(UIAlertAction *action)
-                                                                     {  NSLog(@"OK action");}];
-                                          
-                                          [alertController addAction:okAction];
-                                          [self presentViewController:alertController animated:YES completion:nil];
-                                      }
-                                      UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Home" bundle:nil];
-                                      RegisterViewController *vc = [sb instantiateViewControllerWithIdentifier:@"HomeViewController"];
-                                      [self.navigationController pushViewController:vc animated:YES];
-                                  }
-         ];
+        [[FIRAuth auth] signInWithCredential:credential completion:^(FIRUser * _Nullable user, NSError * _Nullable error) {
+            if(user){
+                NSString *welcomeMessage = [NSString stringWithFormat: @"Welcome to We Volunteer, %@", user.displayName];
+                NSString *alertTitle = @"We Volunteer";
+                UIAlertController *alertController = [UIAlertController alertControllerWithTitle:alertTitle message:welcomeMessage preferredStyle:UIAlertControllerStyleAlert];
+                UIAlertAction *okAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"OK", @"OK action") style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
+                    NSLog(@"OK action");
+                }];
+                [alertController addAction:okAction];
+                [self presentViewController:alertController animated:YES completion:nil];
+            }
+        }];
+        UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Home" bundle:nil];
+        HomeViewController *vc = [sb instantiateViewControllerWithIdentifier:@"HomeViewController"];
+        [self.navigationController pushViewController:vc animated:YES];
     } else {
         NSLog(@"%@", error.localizedDescription);
     }
