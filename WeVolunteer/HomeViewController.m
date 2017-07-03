@@ -86,4 +86,14 @@
         self.imageView.image = [UIImage imageNamed:@"listSample.png"];
     }
 }
+
+- (void)didTapSignOutButton:(id)sender {
+    FIRAuth *firebaseAuth = [FIRAuth auth];
+    NSError *signOutError;
+    BOOL status = [firebaseAuth signOut:&signOutError];
+    if (!status) {
+        NSLog(@"Error signing out: %@", signOutError);
+        return;
+    }
+}
 @end

@@ -6,13 +6,16 @@
 //  Copyright © 2017 Daniel Oliveira. All rights reserved.
 //
 
+@import Firebase;
+@import GoogleSignIn;
 #import <UIKit/UIKit.h>
 
-@interface HomeViewController : UIViewController
+@interface HomeViewController : UIViewController <GIDSignInDelegate, GIDSignInUIDelegate>
 
 @property (strong, nonatomic) IBOutlet UISegmentedControl *segmentControl;
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
 
 - (IBAction)segmentControl:(id)sender;
+- (IBAction)didTapSignOutButton:(id)sender;
 
 @end

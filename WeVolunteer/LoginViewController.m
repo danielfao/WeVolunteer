@@ -29,6 +29,11 @@
     //Puts an image on the left side of the text field
     [AppUtils setTextFieldLeftImageWithImage:[UIImage imageNamed:@"ic_lock_white"] andTextField:self.passwordTextField andPadding:5.0];
     [AppUtils setTextFieldLeftImageWithImage:[UIImage imageNamed:@"ic_email_white"] andTextField:self.emailTextField andPadding:5.0];
+    
+    //Sign in Google Authentication
+    [GIDSignIn sharedInstance].clientID = [FIRApp defaultApp].options.clientID;
+    [GIDSignIn sharedInstance].delegate = self;
+    [GIDSignIn sharedInstance].uiDelegate = self;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -65,6 +70,44 @@
 }
 
 - (IBAction)didTapGoogleButton:(id)sender {
+    
+}
+
+-(void)signIn:(GIDSignIn *) signIn didSignInForUser:(GIDGoogleUser *)user withError:(NSError *)error {
+    if(error == nil) {
+        GIDAuthentication *authentication = user.authentication;
+        FIRAuthCredential *credential = [FIRGoogleAuthProvider
+                                         credentialWithIDToken:authentication.idToken
+                                         accessToken:authentication.accessToken];
+        
+        [[FIRAuth auth] signInWithCredential:credential
+                                  completion:^(FIRUser * _Nullable user,
+                                               NSError * _Nullable error) {
+                                      if(user){
+                                          NSString *welcomeMessage = [NSString stringWithFormat:
+                                                                      @"Welcome to We Volunteer, %@", user.displayName];
+                                          NSString *alertTitle = @"We Volunteer";
+                                          UIAlertController *alertController = [UIAlertController
+                                                                                alertControllerWithTitle:alertTitle
+                                                                                message:welcomeMessage
+                                                                                preferredStyle:UIAlertControllerStyleAlert];
+                                          UIAlertAction *okAction = [UIAlertAction
+                                                                     actionWithTitle:NSLocalizedString(@"OK", @"OK action")
+                                                                     style:UIAlertActionStyleDefault
+                                                                     handler:^(UIAlertAction *action)
+                                                                     {  NSLog(@"OK action");}];
+                                          
+                                          [alertController addAction:okAction];
+                                          [self presentViewController:alertController animated:YES completion:nil];
+                                      }
+                                      UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Home" bundle:nil];
+                                      RegisterViewController *vc = [sb instantiateViewControllerWithIdentifier:@"HomeViewController"];
+                                      [self.navigationController pushViewController:vc animated:YES];
+                                  }
+         ];
+    } else {
+        NSLog(@"%@", error.localizedDescription);
+    }
 }
 
 - (IBAction)didTapFacebookButton:(id)sender {

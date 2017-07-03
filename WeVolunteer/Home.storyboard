@@ -17,7 +17,7 @@
                         <inset key="imageInsets" minX="7" minY="12" maxX="7" maxY="3"/>
                     </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="i34-Ug-Kfu">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="i34-Ug-Kfu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -60,6 +60,17 @@
                                     <action selector="segmentControl:" destination="CVD-md-uq9" eventType="valueChanged" id="3X8-fM-oKA"/>
                                 </connections>
                             </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q2S-eQ-Hme">
+                                <rect key="frame" x="8" y="580" width="63" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Sign Out">
+                                    <color key="titleColor" red="0.28739721689152686" green="0.29833036547819203" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapSignOutButton:" destination="CVD-md-uq9" eventType="touchUpInside" id="VQk-Hn-Zsp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -76,7 +87,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="12Y-cc-fuJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="577" y="127"/>
+            <point key="canvasLocation" x="576.79999999999995" y="126.38680659670166"/>
         </scene>
     </scenes>
     <resources>

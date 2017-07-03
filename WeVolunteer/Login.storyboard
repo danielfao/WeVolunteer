@@ -116,9 +116,6 @@
                                             <constraint firstAttribute="height" constant="64" id="7AP-k4-Psk"/>
                                         </constraints>
                                         <state key="normal" image="ic_google"/>
-                                        <connections>
-                                            <action selector="didTapGoogleButton:" destination="XxZ-st-ShL" eventType="touchUpInside" id="r9B-Vb-ta3"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EJz-CB-7p6" userLabel="Facebook icon">
                                         <rect key="frame" x="155.5" y="0.0" width="155.5" height="64"/>
@@ -193,6 +190,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="GTR-uo-mFv" id="DAw-vU-QJT"/>
                         <outlet property="passwordTextField" destination="GVX-Hx-cIG" id="Zl7-8B-0tU"/>
+                        <outlet property="signInButton" destination="mbe-GS-8St" id="rPG-3Z-tUZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3mx-lv-6LV" userLabel="First Responder" sceneMemberID="firstResponder"/>

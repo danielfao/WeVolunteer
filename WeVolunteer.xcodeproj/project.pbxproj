@@ -25,6 +25,7 @@
 		11FDFA2D1F05750F00C3ADBF /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11FDFA2C1F05750F00C3ADBF /* Register.storyboard */; };
 		11FDFA301F05752000C3ADBF /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11FDFA2F1F05752000C3ADBF /* RegisterViewController.m */; };
 		C4BC8226FD98BF7109E7B9C8 /* libPods-WeVolunteer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 339191B153D558D6A206AD66 /* libPods-WeVolunteer.a */; };
+		E0E04B0A1F09C98A005D30AD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E0E04B091F09C98A005D30AD /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,7 @@
 		11FDFA2F1F05752000C3ADBF /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		339191B153D558D6A206AD66 /* libPods-WeVolunteer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WeVolunteer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A56522C5797B734E61C07D76 /* Pods-WeVolunteer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeVolunteer.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeVolunteer/Pods-WeVolunteer.release.xcconfig"; sourceTree = "<group>"; };
+		E0E04B091F09C98A005D30AD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +177,7 @@
 		114CFBEB1EF02F39002F4B7D /* WeVolunteer */ = {
 			isa = PBXGroup;
 			children = (
+				E0E04B091F09C98A005D30AD /* GoogleService-Info.plist */,
 				114CFBEF1EF02F39002F4B7D /* AppDelegate.h */,
 				114CFBF01EF02F39002F4B7D /* AppDelegate.m */,
 				114CFBFD1EF02F39002F4B7D /* Info.plist */,
@@ -310,6 +313,7 @@
 			files = (
 				113FFE4D1F02B3C700162188 /* Profile.storyboard in Resources */,
 				113FFE581F04068F00162188 /* InitialSetUp.storyboard in Resources */,
+				E0E04B0A1F09C98A005D30AD /* GoogleService-Info.plist in Resources */,
 				1114CA5B1EF045C8005A14CE /* Login.storyboard in Resources */,
 				118038311EF17C750062DEF9 /* Home.storyboard in Resources */,
 				114CFBFC1EF02F39002F4B7D /* LaunchScreen.storyboard in Resources */,
