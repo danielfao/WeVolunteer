@@ -13,7 +13,7 @@
 
 @end
 
-@implementation HomeViewController
+@implementation HomeViewController 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -63,8 +63,6 @@
 */
 
 
-
-
 //Set Navigation Button Image
 - (UIButton*)setImageNavbarButtons: (NSString *) imageName {
     UIImage* image = [UIImage imageNamed: imageName];
@@ -88,6 +86,7 @@
     }
 }
 
+//Sign out button
 - (void)didTapSignOutButton:(id)sender {
     FIRAuth *firebaseAuth = [FIRAuth auth];
     NSError *signOutError;
@@ -98,7 +97,8 @@
     }
     
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
-    LoginViewController *vc = [sb instantiateViewControllerWithIdentifier:@"LoginViewController"];
-    [self.navigationController pushViewController:vc animated:YES];
+    LoginViewController *vc = [sb instantiateInitialViewController];
+    [self.navigationController presentViewController:vc animated:YES completion:nil];
+
 }
 @end

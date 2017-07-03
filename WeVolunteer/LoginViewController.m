@@ -69,6 +69,36 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
+- (IBAction)didTapGoogleSignInButton:(id)sender {
+    [[GIDSignIn sharedInstance] signIn];
+}
+
+
+- (IBAction)didTapFacebookButton:(id)sender {
+}
+
+//Method called when clicking anywhere in the view
+- (IBAction)hideKeyboard:(id)sender {
+    [self.view endEditing:YES];
+}
+
+#pragma mark - Google SignIn Delegate
+
+- (void)signInWillDispatch:(GIDSignIn *)signIn error:(NSError *)error {
+    
+}
+
+// Present a view that prompts the user to sign in with Google
+- (void)signIn:(GIDSignIn *)signIn presentViewController:(UIViewController *)viewController
+{
+    [self presentViewController:viewController animated:YES completion:nil];
+}
+
+// Dismiss the "Sign in with Google" view
+- (void)signIn:(GIDSignIn *)signIn dismissViewController:(UIViewController *)viewController {
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+}
 - (void)signIn:(GIDSignIn *) signIn didSignInForUser:(GIDGoogleUser *)user withError:(NSError *)error {
     if(error == nil) {
         GIDAuthentication *authentication = user.authentication;
@@ -96,11 +126,4 @@
     }
 }
 
-- (IBAction)didTapFacebookButton:(id)sender {
-}
-
-//Method called when clicking anywhere in the view
-- (IBAction)hideKeyboard:(id)sender {
-    [self.view endEditing:YES];
-}
 @end

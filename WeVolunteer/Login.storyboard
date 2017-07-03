@@ -110,9 +110,13 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="m48-kM-ofz">
                                 <rect key="frame" x="32" y="484" width="311" height="64"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Dp-oK-as1" customClass="GIDSignInButton">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9IL-Dj-o2K">
                                         <rect key="frame" x="0.0" y="0.0" width="155.5" height="64"/>
-                                    </view>
+                                        <state key="normal" image="ic_google"/>
+                                        <connections>
+                                            <action selector="didTapGoogleSignInButton:" destination="XxZ-st-ShL" eventType="touchUpInside" id="kLt-T9-K52"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EJz-CB-7p6" userLabel="Facebook icon">
                                         <rect key="frame" x="155.5" y="0.0" width="155.5" height="64"/>
                                         <constraints>
@@ -186,7 +190,6 @@
                     <connections>
                         <outlet property="emailTextField" destination="GTR-uo-mFv" id="DAw-vU-QJT"/>
                         <outlet property="passwordTextField" destination="GVX-Hx-cIG" id="Zl7-8B-0tU"/>
-                        <outlet property="signInButton" destination="1Dp-oK-as1" id="Nwi-vZ-VIj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3mx-lv-6LV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -196,5 +199,6 @@
     </scenes>
     <resources>
         <image name="ic_facebook" width="64" height="64"/>
+        <image name="ic_google" width="64" height="64"/>
     </resources>
 </document>
