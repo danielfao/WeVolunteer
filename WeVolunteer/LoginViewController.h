@@ -19,7 +19,6 @@
 - (IBAction)didTapSignInButton:(id)sender;
 - (IBAction)didTapForgotPasswordButton:(id)sender;
 - (IBAction)didTapRegisterButton:(id)sender;
-- (IBAction)didTapGoogleButton:(id)sender;
 - (IBAction)didTapFacebookButton:(id)sender;
 - (IBAction)hideKeyboard:(id)sender;
 

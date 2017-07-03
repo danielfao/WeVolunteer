@@ -13,7 +13,7 @@
         <scene sceneID="TsF-Ff-ZhQ">
             <objects>
                 <navigationController id="rfY-o9-zW8" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hbg-Dq-MHC">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="hbg-Dq-MHC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -110,13 +110,9 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="m48-kM-ofz">
                                 <rect key="frame" x="32" y="484" width="311" height="64"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mbe-GS-8St" userLabel="GPlus icon">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Dp-oK-as1" customClass="GIDSignInButton">
                                         <rect key="frame" x="0.0" y="0.0" width="155.5" height="64"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="64" id="7AP-k4-Psk"/>
-                                        </constraints>
-                                        <state key="normal" image="ic_google"/>
-                                    </button>
+                                    </view>
                                     <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EJz-CB-7p6" userLabel="Facebook icon">
                                         <rect key="frame" x="155.5" y="0.0" width="155.5" height="64"/>
                                         <constraints>
@@ -190,7 +186,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="GTR-uo-mFv" id="DAw-vU-QJT"/>
                         <outlet property="passwordTextField" destination="GVX-Hx-cIG" id="Zl7-8B-0tU"/>
-                        <outlet property="signInButton" destination="mbe-GS-8St" id="rPG-3Z-tUZ"/>
+                        <outlet property="signInButton" destination="1Dp-oK-as1" id="Nwi-vZ-VIj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3mx-lv-6LV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -200,6 +196,5 @@
     </scenes>
     <resources>
         <image name="ic_facebook" width="64" height="64"/>
-        <image name="ic_google" width="64" height="64"/>
     </resources>
 </document>

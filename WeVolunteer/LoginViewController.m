@@ -69,10 +69,6 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
-- (IBAction)didTapGoogleButton:(id)sender {
-    
-}
-
 -(void)signIn:(GIDSignIn *) signIn didSignInForUser:(GIDGoogleUser *)user withError:(NSError *)error {
     if(error == nil) {
         GIDAuthentication *authentication = user.authentication;
