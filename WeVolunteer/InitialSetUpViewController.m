@@ -9,9 +9,10 @@
 #import "InitialSetUpViewController.h"
 #import "TabBarViewController.h"
 #import "LoginViewController.h"
+#import "AppUtils.h"
 
 @interface InitialSetUpViewController ()
-@property (nonatomic) BOOL isLogged;
+
 @end
 
 @implementation InitialSetUpViewController
@@ -24,19 +25,16 @@
     self.navigationController.navigationBar.translucent = NO;
     self.navigationController.navigationBar.hidden = NO;
     self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
-    
-    self.isLogged = NO;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
     //Check if the user is logged or not
-    if (!self.isLogged) {
+    if (![AppUtils retrieveFromUserDefaultWithKey:API_TOKEN]) {
         UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
         LoginViewController *vc = [sb instantiateInitialViewController];
         [self.navigationController presentViewController:vc animated:YES completion:nil];
-        self.isLogged = YES;
     } else {
         UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
         TabBarViewController *vc = [sb instantiateInitialViewController];

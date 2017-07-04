@@ -12,6 +12,10 @@
 
 @interface AppUtils : NSObject
 
++(void) saveToUserDefault:(NSObject*)objectToSave withKey:(NSString*)key;
++(NSObject*) retrieveFromUserDefaultWithKey:(NSString*)key;
++(void) clearUserDefault;
+
 +(UILabel *) createTitleLabelWithString:(NSString *)title;
 +(UIView *) createTableViewHeaderWithTitle:(NSString *)title andView:(UIView *)view;
 +(void)setTextFieldLeftImageWithImage:(UIImage *)image andTextField:(UITextField *)textField andPadding:(CGFloat)leftPadding;

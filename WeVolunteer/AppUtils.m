@@ -10,6 +10,26 @@
 
 @implementation AppUtils
 
+#pragma mark - User Defaults
+
+//Saves information on cache
++(void) saveToUserDefault:(NSObject*)objectToSave withKey:(NSString*)key {
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults setObject:objectToSave forKey:key];
+    [userDefaults synchronize];
+}
+
+//Retrieve information from cache
++(NSObject*) retrieveFromUserDefaultWithKey:(NSString*)key {
+    return [[NSUserDefaults standardUserDefaults] objectForKey:key];
+}
+
+//Clear all cache (used on logout)
++(void) clearUserDefault {
+    [AppUtils saveToUserDefault:nil withKey:API_TOKEN];
+}
+
+
 #pragma mark - Custom components
 
 //Title View

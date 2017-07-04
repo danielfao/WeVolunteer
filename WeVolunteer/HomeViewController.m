@@ -8,6 +8,7 @@
 
 #import "HomeViewController.h"
 #import "LoginViewController.h"
+#import "AppUtils.h"
 
 @interface HomeViewController ()
 
@@ -88,6 +89,7 @@
 
 //Sign out button
 - (void)didTapSignOutButton:(id)sender {
+    [AppUtils clearUserDefault];
     FIRAuth *firebaseAuth = [FIRAuth auth];
     NSError *signOutError;
     BOOL status = [firebaseAuth signOut:&signOutError];
@@ -95,10 +97,7 @@
         NSLog(@"Error signing out: %@", signOutError);
         return;
     }
-    
-    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
-    LoginViewController *vc = [sb instantiateInitialViewController];
-    [self.navigationController presentViewController:vc animated:YES completion:nil];
 
+    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 }
 @end

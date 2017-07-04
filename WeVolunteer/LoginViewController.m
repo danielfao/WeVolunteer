@@ -57,6 +57,7 @@
 - (IBAction)didTapSignInButton:(id)sender {
     [AppUtils startLoadingInView:self.view];
     [AppUtils stopLoadingInView:self.view];
+    [AppUtils saveToUserDefault: @"User" withKey:API_TOKEN];
     [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 }
 
@@ -97,16 +98,17 @@
 // Dismiss the "Sign in with Google" view
 - (void)signIn:(GIDSignIn *)signIn dismissViewController:(UIViewController *)viewController {
     [self dismissViewControllerAnimated:YES completion:nil];
-    
 }
-- (void)signIn:(GIDSignIn *) signIn didSignInForUser:(GIDGoogleUser *)user withError:(NSError *)error {
+
+- (void)signIn:(GIDSignIn *)signIn didSignInForUser:(GIDGoogleUser *)user withError:(NSError *)error {
+    [AppUtils saveToUserDefault:@"User" withKey:API_TOKEN];
     if(error == nil) {
         GIDAuthentication *authentication = user.authentication;
         FIRAuthCredential *credential = [FIRGoogleAuthProvider
                                          credentialWithIDToken:authentication.idToken
                                          accessToken:authentication.accessToken];
         
-        [[FIRAuth auth] signInWithCredential:credential completion:^(FIRUser * _Nullable user, NSError * _Nullable error) {
+        [[FIRAuth auth]signInWithCredential:credential completion:^(FIRUser * _Nullable user, NSError * _Nullable error) {
             if(user){
                 NSString *welcomeMessage = [NSString stringWithFormat: @"Welcome to We Volunteer, %@", user.displayName];
                 NSString *alertTitle = @"We Volunteer";
@@ -118,9 +120,7 @@
                 [self presentViewController:alertController animated:YES completion:nil];
             }
         }];
-        UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Home" bundle:nil];
-        HomeViewController *vc = [sb instantiateViewControllerWithIdentifier:@"HomeViewController"];
-        [self.navigationController pushViewController:vc animated:YES];
+        [self.navigationController dismissViewControllerAnimated:YES completion:nil];
     } else {
         NSLog(@"%@", error.localizedDescription);
     }
