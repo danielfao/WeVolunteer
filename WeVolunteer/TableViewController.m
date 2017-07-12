@@ -35,6 +35,11 @@
     type = @[@"Elderly", @"Dogs", @"Cats", @"Kids"];
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [self.tableView setContentOffset:CGPointZero];
+    [self.tableView setScrollIndicatorInsets:UIEdgeInsetsZero];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
