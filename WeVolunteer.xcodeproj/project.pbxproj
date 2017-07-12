@@ -22,6 +22,9 @@
 		118038311EF17C750062DEF9 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 118038301EF17C750062DEF9 /* Home.storyboard */; };
 		118038341EF17CEB0062DEF9 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 118038331EF17CEB0062DEF9 /* HomeViewController.m */; };
 		1188368B1F0A70CA00F7C1FC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1188368A1F0A70CA00F7C1FC /* GoogleService-Info.plist */; };
+		1188819E1F16526F00A80168 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1188819D1F16526F00A80168 /* MapViewController.m */; };
+		118881A21F16576600A80168 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 118881A11F16576600A80168 /* MapKit.framework */; };
+		118881A61F165DF900A80168 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 118881A51F165DF900A80168 /* TableViewController.m */; };
 		11FDFA211F0535E600C3ADBF /* AppUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 11FDFA201F0535E600C3ADBF /* AppUtils.m */; };
 		11FDFA2D1F05750F00C3ADBF /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11FDFA2C1F05750F00C3ADBF /* Register.storyboard */; };
 		11FDFA301F05752000C3ADBF /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11FDFA2F1F05752000C3ADBF /* RegisterViewController.m */; };
@@ -53,6 +56,11 @@
 		118038321EF17CEB0062DEF9 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		118038331EF17CEB0062DEF9 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		1188368A1F0A70CA00F7C1FC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1188819C1F16526F00A80168 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		1188819D1F16526F00A80168 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		118881A11F16576600A80168 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		118881A41F165DF900A80168 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		118881A51F165DF900A80168 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		11FDFA1F1F0535E600C3ADBF /* AppUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppUtils.h; sourceTree = "<group>"; };
 		11FDFA201F0535E600C3ADBF /* AppUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppUtils.m; sourceTree = "<group>"; };
 		11FDFA231F05407C00C3ADBF /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
@@ -68,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				118881A21F16576600A80168 /* MapKit.framework in Frameworks */,
 				C4BC8226FD98BF7109E7B9C8 /* libPods-WeVolunteer.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -97,6 +106,7 @@
 		113FFE5A1F0412F100162188 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				1188819F1F16527600A80168 /* Map */,
 				11FDFA241F05736A00C3ADBF /* Register */,
 				113FFE5D1F04131A00162188 /* Home */,
 				113FFE5B1F0412FD00162188 /* Login */,
@@ -192,6 +202,7 @@
 				113FFE531F04061300162188 /* InitialSetUp */,
 				114CFBEC1EF02F39002F4B7D /* Supporting Files */,
 				113FFE591F04128C00162188 /* TabBarControllers */,
+				118881A31F165DC000A80168 /* TableViewController */,
 				113FFE5A1F0412F100162188 /* ViewControllers */,
 			);
 			path = WeVolunteer;
@@ -203,6 +214,32 @@
 				114CFBED1EF02F39002F4B7D /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1188819F1F16527600A80168 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				118881A01F16527F00A80168 /* MapViewController */,
+			);
+			name = Map;
+			sourceTree = "<group>";
+		};
+		118881A01F16527F00A80168 /* MapViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1188819C1F16526F00A80168 /* MapViewController.h */,
+				1188819D1F16526F00A80168 /* MapViewController.m */,
+			);
+			name = MapViewController;
+			sourceTree = "<group>";
+		};
+		118881A31F165DC000A80168 /* TableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				118881A41F165DF900A80168 /* TableViewController.h */,
+				118881A51F165DF900A80168 /* TableViewController.m */,
+			);
+			name = TableViewController;
 			sourceTree = "<group>";
 		};
 		11FDFA1B1F0533EE00C3ADBF /* Config */ = {
@@ -235,6 +272,7 @@
 		132AE1502B651845B116E842 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				118881A11F16576600A80168 /* MapKit.framework */,
 				339191B153D558D6A206AD66 /* libPods-WeVolunteer.a */,
 			);
 			name = Frameworks;
@@ -378,6 +416,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				118881A61F165DF900A80168 /* TableViewController.m in Sources */,
 				1114CA5E1EF046B2005A14CE /* LoginViewController.m in Sources */,
 				113FFE561F04067100162188 /* InitialSetUpViewController.m in Sources */,
 				114CFBF11EF02F39002F4B7D /* AppDelegate.m in Sources */,
@@ -385,6 +424,7 @@
 				11FDFA301F05752000C3ADBF /* RegisterViewController.m in Sources */,
 				113FFE481F02B30500162188 /* ProfileViewController.m in Sources */,
 				115A5CF51EF18AFF00E86921 /* TabBarViewController.m in Sources */,
+				1188819E1F16526F00A80168 /* MapViewController.m in Sources */,
 				114CFBEE1EF02F39002F4B7D /* main.m in Sources */,
 				11FDFA211F0535E600C3ADBF /* AppUtils.m in Sources */,
 			);
