@@ -98,7 +98,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="ra9-aI-Hds"/>
                     <connections>
+                        <outlet property="mapViewContainer" destination="T2c-Jx-0G3" id="bqv-VU-Nzp"/>
                         <outlet property="segmentControl" destination="eM1-ZA-cNc" id="GFM-RB-F4a"/>
+                        <outlet property="tableViewContainer" destination="Mes-yd-NRY" id="rlg-b6-IRp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="12Y-cc-fuJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -109,6 +111,10 @@
         <scene sceneID="LcG-0B-LPr">
             <objects>
                 <viewController id="ExN-tT-ueZ" customClass="MapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Zds-Om-Z5i"/>
+                        <viewControllerLayoutGuide type="bottom" id="GrZ-qB-IiZ"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="y3I-Xx-H3P">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="512"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -154,16 +160,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="512"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="3KC-Jg-2Jf">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3KC-Jg-2Jf" id="X42-mq-SCa">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="itf-s5-jIB" id="P7l-b6-FP6"/>
                             <outlet property="delegate" destination="itf-s5-jIB" id="9gi-Ul-wvf"/>

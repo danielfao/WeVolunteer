@@ -13,7 +13,8 @@
 @interface HomeViewController : UIViewController <GIDSignInDelegate, GIDSignInUIDelegate>
 
 @property (strong, nonatomic) IBOutlet UISegmentedControl *segmentControl;
-@property (strong, nonatomic) IBOutlet UIImageView *imageView;
+@property (strong, nonatomic) IBOutlet UIView *tableViewContainer;
+@property (strong, nonatomic) IBOutlet UIView *mapViewContainer;
 
 - (IBAction)segmentControl:(id)sender;
 - (IBAction)didTapSignOutButton:(id)sender;

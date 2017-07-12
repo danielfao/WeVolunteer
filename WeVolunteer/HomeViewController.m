@@ -21,7 +21,6 @@
     // Do any additional setup after loading the view.
 
     self.navigationItem.hidesBackButton = YES;
-    self.imageView.image = [UIImage imageNamed:@"mapSample"];
 
     
     //Right Navigation Buttons - Add Button
@@ -80,10 +79,13 @@
 
 - (IBAction)segmentControl:(id)sender {
     if (self.segmentControl.selectedSegmentIndex == 0) {
-        self.imageView.image = [UIImage imageNamed:@"mapSample.png"];
+        [self.mapViewContainer setHidden:NO];
+        [self.tableViewContainer setHidden:YES];
+        
     }
     if (self.segmentControl.selectedSegmentIndex == 1) {
-        self.imageView.image = [UIImage imageNamed:@"listSample.png"];
+        [self.mapViewContainer setHidden:YES];
+        [self.tableViewContainer setHidden:NO];
     }
 }
 

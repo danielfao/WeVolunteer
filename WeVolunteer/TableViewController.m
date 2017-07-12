@@ -7,6 +7,7 @@
 //
 
 #import "TableViewController.h"
+#import "ReusableTableCell.h"
 
 @interface TableViewController ()
 
@@ -22,6 +23,16 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    [self.tableView registerClass:[ReusableTableCell class] forCellReuseIdentifier:reusableCellIdentifier];
+    [self.tableView registerNib:[UINib nibWithNibName:@"ReusableTableCell" bundle:nil] forCellReuseIdentifier:reusableCellIdentifier];
+    
+    date = @[@"12 Jul. 2017", @"10 Jun. 2017", @"05 Feb. 2017", @"10 Jan. 2017"];
+    time = @[@"10:00 AM", @"05:00 AM", @"06:00 PM", @"12:00 PM"];
+    title = @[@"Ajuda em Asilo", @"Cuidar de Cachorros", @"Cuidar de Gatos", @"Ajuda em Orfanato"];
+    author = @[@"Daniel Oliveira", @"Carlos Menzoni", @"Yasmin Benatti", @"João Fontana"];
+    contact = @[@"email@email.com", @"email@email.com", @"email@email.com", @"email@email.com"];
+    type = @[@"Elderly", @"Dogs", @"Cats", @"Kids"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,24 +43,31 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return title.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    ReusableTableCell *cell = [tableView dequeueReusableCellWithIdentifier:reusableCellIdentifier forIndexPath:indexPath];
     
-    // Configure the cell...
+    cell.cellTitleLabel.text = title[indexPath.row];
+    cell.cellTimeLabel.text = time[indexPath.row];
+    cell.cellDateLabel.text = date[indexPath.row];
+    cell.cellAuthorLabel.text = author[indexPath.row];
+    cell.cellContactLabel.text = contact[indexPath.row];
+    cell.cellTypeLabel.text = type[indexPath.row];
     
     return cell;
 }
-*/
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 146.0f;
+}
+
 
 /*
 // Override to support conditional editing of the table view.

@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TableViewController : UITableViewController
+@interface TableViewController : UITableViewController {
+    NSArray *date;
+    NSArray *time;
+    NSArray *title;
+    NSArray *author;
+    NSArray *contact;
+    NSArray *type;
+}
 
 @end
