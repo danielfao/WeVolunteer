@@ -21,6 +21,11 @@
     self.mapView.delegate = self;
     locationManager.delegate = self;
     locationManager = [[CLLocationManager alloc] init];
+    
+    [locationManager requestWhenInUseAuthorization];
+    
+    [locationManager startUpdatingLocation];
+    self.mapView.showsUserLocation = YES;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -38,14 +43,14 @@
 }
 */
 
-//Shows the user location on the map
+//Zoom into user location on the map
 - (IBAction)myLocation:(id)sender {
-    [locationManager requestWhenInUseAuthorization];
-    [locationManager requestAlwaysAuthorization];
+    MKCoordinateRegion mapRegion;
+    mapRegion.center = self.mapView.userLocation.coordinate;
+    mapRegion.span.latitudeDelta = 0.2;
+    mapRegion.span.longitudeDelta = 0.2;
     
-    [locationManager startUpdatingLocation];
-    
-    self.mapView.showsUserLocation = YES;
+    [self.mapView setRegion:mapRegion animated: YES];
 }
 
 @end
