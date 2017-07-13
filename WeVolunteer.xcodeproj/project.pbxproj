@@ -27,6 +27,7 @@
 		118881A61F165DF900A80168 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 118881A51F165DF900A80168 /* TableViewController.m */; };
 		118881AF1F16684200A80168 /* ReusableTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 118881AD1F16684200A80168 /* ReusableTableCell.m */; };
 		118881B01F16684200A80168 /* ReusableTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 118881AE1F16684200A80168 /* ReusableTableCell.xib */; };
+		118881B51F179DA600A80168 /* OfferDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 118881B41F179DA600A80168 /* OfferDetailViewController.m */; };
 		11FDFA211F0535E600C3ADBF /* AppUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 11FDFA201F0535E600C3ADBF /* AppUtils.m */; };
 		11FDFA2D1F05750F00C3ADBF /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11FDFA2C1F05750F00C3ADBF /* Register.storyboard */; };
 		11FDFA301F05752000C3ADBF /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11FDFA2F1F05752000C3ADBF /* RegisterViewController.m */; };
@@ -66,6 +67,8 @@
 		118881AC1F16684200A80168 /* ReusableTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReusableTableCell.h; sourceTree = "<group>"; };
 		118881AD1F16684200A80168 /* ReusableTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReusableTableCell.m; sourceTree = "<group>"; };
 		118881AE1F16684200A80168 /* ReusableTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReusableTableCell.xib; sourceTree = "<group>"; };
+		118881B31F179DA600A80168 /* OfferDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OfferDetailViewController.h; sourceTree = "<group>"; };
+		118881B41F179DA600A80168 /* OfferDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OfferDetailViewController.m; sourceTree = "<group>"; };
 		11FDFA1F1F0535E600C3ADBF /* AppUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppUtils.h; sourceTree = "<group>"; };
 		11FDFA201F0535E600C3ADBF /* AppUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppUtils.m; sourceTree = "<group>"; };
 		11FDFA231F05407C00C3ADBF /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
@@ -111,6 +114,7 @@
 		113FFE5A1F0412F100162188 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				118881B11F179D7700A80168 /* OfferDetail */,
 				113FFE5D1F04131A00162188 /* Home */,
 				113FFE5B1F0412FD00162188 /* Login */,
 				1188819F1F16527600A80168 /* Map */,
@@ -256,6 +260,23 @@
 				118881AE1F16684200A80168 /* ReusableTableCell.xib */,
 			);
 			name = TableViewCell;
+			sourceTree = "<group>";
+		};
+		118881B11F179D7700A80168 /* OfferDetail */ = {
+			isa = PBXGroup;
+			children = (
+				118881B21F179D8500A80168 /* OfferDetailViewController */,
+			);
+			name = OfferDetail;
+			sourceTree = "<group>";
+		};
+		118881B21F179D8500A80168 /* OfferDetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+				118881B31F179DA600A80168 /* OfferDetailViewController.h */,
+				118881B41F179DA600A80168 /* OfferDetailViewController.m */,
+			);
+			name = OfferDetailViewController;
 			sourceTree = "<group>";
 		};
 		11FDFA1B1F0533EE00C3ADBF /* Config */ = {
@@ -434,6 +455,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				118881A61F165DF900A80168 /* TableViewController.m in Sources */,
+				118881B51F179DA600A80168 /* OfferDetailViewController.m in Sources */,
 				1114CA5E1EF046B2005A14CE /* LoginViewController.m in Sources */,
 				113FFE561F04067100162188 /* InitialSetUpViewController.m in Sources */,
 				114CFBF11EF02F39002F4B7D /* AppDelegate.m in Sources */,

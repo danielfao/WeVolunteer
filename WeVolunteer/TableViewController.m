@@ -8,6 +8,7 @@
 
 #import "TableViewController.h"
 #import "ReusableTableCell.h"
+#import "OfferDetailViewController.h"
 
 @interface TableViewController ()
 
@@ -32,7 +33,7 @@
     title = @[@"Ajuda em Asilo", @"Cuidar de Cachorros", @"Cuidar de Gatos", @"Ajuda em Orfanato"];
     author = @[@"Daniel Oliveira", @"Carlos Menzoni", @"Yasmin Benatti", @"João Fontana"];
     contact = @[@"email@email.com", @"email@email.com", @"email@email.com", @"email@email.com"];
-    type = @[@"Elderly", @"Dogs", @"Cats", @"Kids"];
+    type = @[@"Elderly", @"Dogs", @"Cats", @"Kids"];    
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -45,6 +46,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -54,7 +56,6 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return title.count;
 }
-
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     ReusableTableCell *cell = [tableView dequeueReusableCellWithIdentifier:reusableCellIdentifier forIndexPath:indexPath];
@@ -71,6 +72,11 @@
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 146.0f;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSArray *offerDetail = @[title[indexPath.row], author[indexPath.row], time[indexPath.row], date[indexPath.row], contact[indexPath.row]];
+    [self performSegueWithIdentifier:@"showOfferDetail" sender: offerDetail];
 }
 
 
@@ -108,14 +114,16 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([[segue identifier] isEqualToString:@"showOfferDetail"]) {
+        OfferDetailViewController *offerDetail = [segue destinationViewController];
+        offerDetail.detailModal = (NSArray *)sender;
+    }
 }
-*/
+
 
 @end
